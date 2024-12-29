@@ -1,6 +1,6 @@
 # cotiz
 
-A new Flutter project.
+Une applicaton fintech de cotisation de groupe.
 
 ## Getting Started
 
