@@ -5,6 +5,7 @@ import 'package:sizer/sizer.dart';
 import '../../../../constants/constants.dart';
 import '../../../themes/themes.dart';
 import '../../../widgets/widgets.dart';
+import '../../mobiles/mobiles.dart';
 import '../homes.dart';
 
 class DetailHomePage extends StatefulWidget {
@@ -85,7 +86,14 @@ class _DetailHomePageState extends State<DetailHomePage> {
                                 AppConstants.btnPart,
                                 height: 10.w,
                                 fontSize: 15.sp,
-                                onPressed: () async {},
+                                onPressed: () async {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MobilePage(type: 'Participer'),
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                             Expanded(
@@ -93,7 +101,14 @@ class _DetailHomePageState extends State<DetailHomePage> {
                                 AppConstants.btnTrans,
                                 height: 10.w,
                                 fontSize: 15.sp,
-                                onPressed: () async {},
+                                onPressed: () async {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MobileBenefPage(),
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                           ],
