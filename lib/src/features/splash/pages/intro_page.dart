@@ -4,7 +4,7 @@ import 'package:sizer/sizer.dart';
 import '../../../../constants/constants.dart';
 import '../../../themes/themes.dart';
 import '../../../widgets/widgets.dart';
-import '../../menus/menus.dart';
+import '../../auths/login/login.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -74,7 +74,7 @@ class _IntroPageState extends State<IntroPage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MenuPage(),
+                      builder: (context) => LoginPage(),
                     ),
                   );
                 },

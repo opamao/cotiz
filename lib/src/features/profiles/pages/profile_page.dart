@@ -22,6 +22,49 @@ class _ProfilePageState extends State<ProfilePage> {
           padding: EdgeInsets.all(4.w),
           child: Column(
             children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(3.w),
+                  color: appColorSecond,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(3.w),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Attention",
+                              style: TextStyle(
+                                color: appBlack,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.sp,
+                              ),
+                            ),
+                            Text(
+                              "Votre compte est plafonné, allez-y dans votre "
+                              "compte pour ajouter votre pièce pour déplafonner",
+                              style: TextStyle(
+                                color: appBlack,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 13.sp,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Icon(
+                        Icons.warning_amber_outlined,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -41,12 +84,12 @@ class _ProfilePageState extends State<ProfilePage> {
                               axisLineStyle: AxisLineStyle(
                                 thickness: 0.1,
                                 cornerStyle: CornerStyle.bothCurve,
-                                color: appColor.withValues(alpha:.12),
+                                color: appColor.withValues(alpha: .12),
                                 thicknessUnit: GaugeSizeUnit.factor,
                               ),
                               pointers: <GaugePointer>[
                                 RangePointer(
-                                  value: 25,
+                                  value: 50,
                                   cornerStyle: CornerStyle.bothCurve,
                                   width: 0.1,
                                   sizeUnit: GaugeSizeUnit.factor,
@@ -80,7 +123,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             borderRadius: BorderRadius.circular(1.w),
                           ),
                           child: Text(
-                            "25%",
+                            "50%",
                             style: TextStyle(
                               color: appBlack,
                               fontWeight: FontWeight.bold,
@@ -106,7 +149,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         Text(
-                          "Développeur mobile",
+                          "+2250585831647",
                           style: TextStyle(
                             color: appBlack,
                             fontWeight: FontWeight.normal,
@@ -120,7 +163,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   IconButton(
                     onPressed: () {},
                     icon: Icon(
-                      Icons.edit_outlined,
+                      Icons.remove_red_eye_outlined,
                       color: appColor,
                       size: 18.sp,
                     ),
@@ -135,14 +178,15 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Détails basique",
+                          "Modifier mot de passe",
                           style: TextStyle(
                             color: appBlack,
                             fontSize: 15.sp,
@@ -150,24 +194,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         leading: Icon(
-                          Icons.person_outline_outlined,
+                          Icons.password_outlined,
                           color: appColor,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: appColor,
+                          size: 14.sp,
                         ),
                       ),
                     ),
@@ -175,14 +208,15 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Résumé profil",
+                          "Face ID",
                           style: TextStyle(
                             color: appBlack,
                             fontSize: 15.sp,
@@ -190,24 +224,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         leading: Icon(
-                          Icons.sticky_note_2_outlined,
+                          Icons.face_outlined,
                           color: appColor,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: appColor,
+                          size: 14.sp,
                         ),
                       ),
                     ),
@@ -215,14 +238,15 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Infos professionnelles",
+                          "Emprunte",
                           style: TextStyle(
                             color: appBlack,
                             fontSize: 15.sp,
@@ -230,24 +254,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         leading: Icon(
-                          Icons.dns_outlined,
+                          Icons.fingerprint_outlined,
                           color: appColor,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: appColor,
+                          size: 14.sp,
                         ),
                       ),
                     ),
@@ -255,14 +268,15 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Emploi",
+                          "Confidentialités & Frais",
                           style: TextStyle(
                             color: appBlack,
                             fontSize: 15.sp,
@@ -270,24 +284,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         leading: Icon(
-                          Icons.badge_outlined,
+                          Icons.security_outlined,
                           color: appColor,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: appColor,
+                          size: 14.sp,
                         ),
                       ),
                     ),
@@ -295,14 +298,15 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Education",
+                          "Termes & Conditions",
                           style: TextStyle(
                             color: appBlack,
                             fontSize: 15.sp,
@@ -310,24 +314,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         leading: Icon(
-                          Icons.school_outlined,
+                          Icons.privacy_tip_outlined,
                           color: appColor,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: appColor,
+                          size: 14.sp,
                         ),
                       ),
                     ),
@@ -335,14 +328,15 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Projets",
+                          "Partager l'application",
                           style: TextStyle(
                             color: appBlack,
                             fontSize: 15.sp,
@@ -350,24 +344,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         leading: Icon(
-                          Icons.donut_large_outlined,
+                          Icons.share,
                           color: appColor,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: appColor,
+                          size: 14.sp,
                         ),
                       ),
                     ),
@@ -375,79 +358,29 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: appColor.withValues(alpha:.12),
+                          color: appColor.withValues(alpha: .12),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(3.w),
                       ),
                       child: ListTile(
+                        onTap: () {},
                         title: Text(
-                          "Compétences clés",
+                          "Se déconnecter",
                           style: TextStyle(
-                            color: appBlack,
+                            color: Colors.red,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         leading: Icon(
-                          Icons.widgets_outlined,
-                          color: appColor,
+                          Icons.logout,
+                          color: Colors.red,
                         ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Gap(1.h),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: appColor.withValues(alpha:.12),
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(3.w),
-                      ),
-                      child: ListTile(
-                        title: Text(
-                          "Curriculum vitae / CV",
-                          style: TextStyle(
-                            color: appBlack,
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        leading: Icon(
-                          Icons.sticky_note_2_outlined,
-                          color: appColor,
-                        ),
-                        trailing: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: appColor,
-                            size: 14.sp,
-                          ),
-                          label: Text(
-                            "Ajouter",
-                            style: TextStyle(
-                              color: appColor,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        trailing: Icon(
+                          Icons.navigate_next_outlined,
+                          color: Colors.red,
+                          size: 14.sp,
                         ),
                       ),
                     ),
